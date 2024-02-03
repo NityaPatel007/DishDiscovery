@@ -1,0 +1,434 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonts */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #10000d;
+}
+
+/* Basic styling */
+.header {
+    background-color: #241f1f;
+    color: #fff; 
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+em
+{
+    font-family: emoji;
+    font-weight: 100;
+    font-size: 70px;
+    padding-left: 30px;
+}
+.logo img{
+    width: 17%;
+    height: auto;
+}
+
+.navbar {
+    display: flex;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    font-size: 31px;
+    font-family: emoji;
+}
+
+.nav-item {
+    margin-right: 20px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+    color: #f0f0f0; /* Lighter color on hover */
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 100px 0;
+    color: white; 
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    animation: changeBackground 20s infinite;
+}
+
+.hero-slider {
+    background-size: cover;
+    background-position: center;
+    height: 10vh;
+    animation: changeBackground 20s infinite;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-text h2 {
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-family: emoji;
+}
+
+.hero-text h3 {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.hero-text p {
+    color: darkslategray;
+}
+
+@keyframes changeBackground {
+    0% {
+        background-image: url('italianpasta.jpg');
+    }
+    33.33% {
+        background-image: url('back.jpg');
+    }
+    66.66% {
+        background-image: url('Pancakes.jpg');
+    }
+    100% {
+        background-image: url('Poha.jpg');
+    }
+}
+
+.normal-content {
+    background-color: #f8f9fa; 
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px 140px;
+}
+
+.normal-content h3 {
+    color:rgb(66, 49, 52); 
+    font-size: 1.5em;
+    margin-bottom: 10px; 
+    text-align: center;
+}
+
+.normal-content p {
+    color: #10000d; /* Medium text color */
+    font-size: 1.1em; /* Adjust font size as needed */
+    margin-bottom: 15px; /* Add space below each paragraph */
+}
+
+.normal-content p:last-child {
+    margin-bottom: 0; /* Remove margin bottom from the last paragraph */
+}
+
+.recipe-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.recipe-card {
+    flex: 0 0 calc(33.33% - 20px); /* Adjust the width as needed */
+    margin: 10px;
+    box-sizing: border-box;
+    border: solid white 2px;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+
+.recipe-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #fffdfd;
+    padding-top: 6px;
+}
+
+.recipe-card p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: #aba6a6;
+}
+
+.recipe-card a {
+    display: inline-block;
+    background-color: #251f1d;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.recipe-card a:hover {
+    background-color: #383231; /* Darker coral on hover */
+}
+.recipe-card img {
+    width: 100%; /* Set the width of the image to 100% of its container */
+    height: auto; /* Allow the height to adjust automatically to maintain aspect ratio */
+    border-radius: 8px; /* Add border-radius for rounded corners, adjust as needed */
+}
+.form-container {
+    background-color: #292424;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(31, 27, 27, 0.1);
+    max-width: 100%;
+    margin: 20px;
+    color: ghostwhite;
+}
+
+.form-container h2 {
+    color: #ffffff; 
+    font-size: 2em; 
+    margin-bottom: 20px; 
+    text-align: center;
+}
+
+.form-group option {
+    margin-bottom: 20px;
+    color: whitesmoke;
+    background-color: #080710;
+}
+
+label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid #9f938f; 
+    border-radius: 5px;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #ff0000; /* Lighter coral border on focus */
+    outline: none;
+}
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+} 
+
+button {
+    background-color: #463e3c; /* Coral button background */
+    color: #fff; /* White text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #423532; /* Lighter coral on hover */
+}
+
+.loginn {
+    background-color: #232323;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #080710;
+    padding: 15px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.form-container_register {
+    background-color: rgba(255, 255, 255, 0.13);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 50px 35px;
+    max-width: 450px;
+    margin: 10px auto; 
+}
+
+.form-container_register h2 {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+input,
+select {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #ffffff;
+    border: none;
+    outline: none;
+}
+
+select {
+    color: #ffffff;
+}
+
+button {
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.form-switch {
+    text-align: center;
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+.form-switch a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.form-switch a:hover {
+    text-decoration: underline;
+}
+
+
+.body_recipes {
+    font-family: Arial, sans-serif;
+    background-color: #10000d; /* Light gray background */
+    padding: 20px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 30px;
+    justify-items: center;
+}
+/* Recipe layout */
+.recipe {
+    background-color: #c9dff3; /* White background */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+
+}
+
+.recipe img {
+    width: 100%; /* Ensure image fills container */
+    border-radius: 8px; /* Rounded corners for image */
+}
+
+.recipe h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.recipe p {
+    font-size: 1.1em;
+    color: #333333; /* Dark gray text color */
+    margin-bottom: 15px;
+}
+
+.recipe ul {
+    margin-bottom: 15px;
+}
+
+.recipe ol {
+    margin-bottom: 15px;
+}
+
+.recipe li {
+    margin-bottom: 5px;
+    margin-left: 15px;
+}
+
+.recipe a {
+    display: inline-block;
+    background-color: #007bff; /* Blue button background */
+    color: #fff; /* White text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.recipe a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+.footer {
+    background-color: #333; /* Dark footer background */
+    color: #fff; /* White text color */
+    text-align: center;
+    padding: 20px 0;
+}

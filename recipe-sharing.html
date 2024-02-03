@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Your Recipe - DishDiscovery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet"></head>
+<body>
+    <header class="header">
+        <h1 class="logo"><img src="Image/Logo Dish Discovery.jpg" alt=""> <em style="vertical-align: top;">Dish Discovery</em></h1>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html">Home</a></li>
+                <li class="nav-item"><a href="recipes.html">Recipes</a></li>
+                <li class="nav-item"><a href="recipe-sharing.html">Share</a></li>
+                <li class="nav-item"><a href="register.html">Register</a></li>
+                <li class="nav-item"><a href="/about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div>
+            <div class="form-container">
+                <h2>Share Your Recipe With Us</h2>
+                <form action="/submit-recipe" method="POST">
+                    <div class="form-group">
+                        <label for="recipe-title">Recipe Name:</label>
+                        <input type="text" id="recipe-title" name="recipe-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="recipe-description">Description:</label>
+                        <textarea id="recipe-description" name="recipe-description" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="cuisine">Cuisine:</label>
+                        <select name="cuisine" id="cuisine">
+                            <option value="">Select Cuisine</option>
+                            <option value="1">Italian</option>
+                            <option value="2">Mexican</option>
+                            <option value="3">Indian</option>
+                            <option value="4">Chinese</option>
+                            <option value="5">Japanese</option>
+                            <option value="6">Thai</option>
+                            <option value="7">French</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="ingredients">Ingredients:</label>
+                        <textarea id="ingredients" name="ingredients" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="instructions">Instructions:</label>
+                        <textarea id="instructions" name="instructions" rows="8" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Image URL:</label>
+                        <input type="text" id="image" name="image" required>
+                    </div>
+                    <button type="submit">Submit Recipe</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <p>&copy; 2024 DishDiscovery. All rights reserved.</p>
+    </footer>
+</body>
+</html>
