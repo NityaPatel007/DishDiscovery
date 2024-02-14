@@ -117,13 +117,19 @@ em
     }
 }
 
+.devinfo
+{
+    text-align: left;
+}
+
 .normal-content {
-    background-color: #f8f9fa; 
+    background-color: #f8f9fa;
     padding: 20px;
     border-radius: 8px;
     border: 2px solid rgb(0, 0, 0);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 20px 140px;
+    font: initial;
 }
 
 .normal-content h3 {
