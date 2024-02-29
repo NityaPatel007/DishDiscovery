@@ -20,7 +20,7 @@ const images = ['italianpasta.jpg', 'back.jpg', 'Pancakes.jpg', 'Poha.jpg'];
             if (image === 'italianpasta.jpg' || image === 'back.jpg') {
                 return 'black';
             } else if (image === 'Pancakes.jpg' || image === 'Poha.jpg') {
-                return 'white';
+                return 'white';npm i express ejs express-validator
             }
         }
 
