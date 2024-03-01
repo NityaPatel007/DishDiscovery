@@ -440,3 +440,21 @@ button {
     text-align: center;
     padding: 20px 0;
 }
+.main-content_ingredients{
+    max-width: 100%;
+    margin: 12% 5%;
+}
+.main-content_ingredients h1{
+    background-color: white;
+    width: 6%;
+    height: 6%;
+    text-align: center;
+    padding: 2%;
+    color: black;
+}
+.main-content_ingredients h3{
+    color: white;
+    width: 25%;
+    margin-top:2% ;
+    float: left;
+}
