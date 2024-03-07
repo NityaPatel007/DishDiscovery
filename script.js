@@ -20,11 +20,6 @@ const port = 2710;
 // Set up static folder, body parser, session, view engine
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: false }));
-app.use(session({
-    secret: "juiceshop-8868046",
-    resave: false,
-    saveUninitialized: true
-}));
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
