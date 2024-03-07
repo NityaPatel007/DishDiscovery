@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DishDiscovery</title>
+    <link rel="stylesheet" href="css\style.css">
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <%- include("../shared/head") %>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="hero-slider">
+                <div class="hero-text">
+                    <h2>Discover & Share Delicious Recipes</h2>
+                    <h3>Join our community of food lovers!</h3>
+                </div>
+            </div>
+        </section>
+        
+        <!--Not Working !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->>
+        <script>
+            const images = ['Image/italianpasta.jpg', 'Image/back.jpg', 'Image/Pancakes.jpg', 'Image/Poha.jpg'];
+            let currentIndex = 0;
+        
+            function changeBackground() {
+                const heroSlider = document.querySelector('.hero-slider');
+                const heroText = document.querySelector('.hero-text');
+                const currentImage = images[currentIndex];
+        
+                heroSlider.style.backgroundImage = `url('${currentImage}')`;
+        
+                // Set text color based on the current image
+                const textColor = getTextcolorForImage(currentImage);
+                heroText.style.color = textColor;
+        
+                currentIndex = (currentIndex + 1) % images.length;
+            }
+        
+            function getTextcolorForImage(image) {
+                // Check the current image and return the appropriate text color
+                if (image === 'Image/italianpasta.jpg' || image === 'Image/back.jpg') {
+                    return 'black';
+                } else if (image === 'Image/Pancakes.jpg' || image === 'Image/Poha.jpg') {
+                    return 'white';
+                }
+            }
+        
+            setInterval(changeBackground, 5000);
+        </script>
+
+        <section>
+            <div class="normal-content">
+                <h3>Join DishDiscovery</h3>
+                <p>Welcome to DishDiscovery, your ultimate destination for exploring and sharing mouthwatering recipes from around the globe. Whether you're a seasoned chef or just starting your culinary journey, our platform offers a wide array of recipes to suit every taste and skill level.</p>
+                <p>Join our vibrant community of food enthusiasts, where you can discover new culinary delights, share your favorite recipes, and connect with like-minded individuals who share your passion for cooking.</p>
+                <p>Start your culinary adventure today and embark on a journey of flavor exploration with DishDiscovery!</p>
+        
+            </div>
+        </section>
+            <section class="recipe-cards">
+<<<<<<< HEAD:index.html
+                
+=======
+                <div class="recipe-card">
+                    <img src="Image/italianpasta.jpg" alt="Italian Pasta">
+                    <h2>Italian Pasta</h2>
+                    <p>Delicious pasta with tomato sauce, basil, and parmesan cheese.</p>
+                    <a href="#">View Recipe</a>
+                </div>
+>>>>>>> 1e5324f09f25b674272c5f5a49974dd5a7136be5:Views/pages/index.ejs
+                <div class="recipe-card">
+                    <img src="Image/japaneseshushi.jpg" alt="Japanese Sushi">
+                    <h2>Japanese Sushi</h2>
+                    <p>Fresh sushi rolls with salmon, avocado, and cucumber.</p>
+                    <a href="#">View Recipe</a>
+                </div>
+                <div class="recipe-card">
+                    <img src="Image/mexicantacos.jpg" alt="Mexican Tacos">
+                    <h2>Mexican Tacos</h2>
+                    <p>Spicy tacos with seasoned ground beef, salsa, and cheese.</p>
+                    <a href="#">View Recipe</a>
+                </div>
+                <div class="recipe-card">
+                    <img src="Image/chickencurry.jpg" alt="Indian Curry">
+                    <h2>Indian Chicken Curry</h2>
+                    <p>Fragrant curry with chicken, vegetables, and aromatic spices.</p>
+                    <a href="#">View Recipe</a>
+                </div>
+<<<<<<< HEAD:index.html
+                
+=======
+                <div class="recipe-card">
+                    <img src="Image/thaipad.jpg" alt="Thai Pad Thai">
+                    <h2>Thai Pad Thai</h2>
+                    <p>Savory stir-fried noodles with shrimp, tofu, peanuts, and lime.</p>
+                    <a href="#">View Recipe</a>
+                </div>
+                <div class="recipe-card">
+                    <img src="Image/Moroccan_tagine.jpg" alt="Moroccan Tagine">
+                    <h2>Moroccan Tagine</h2>
+                    <p>Flavorful tagine with tender lamb, apricots, and Moroccan spices.</p>
+                    <a href="#">View Recipe</a>
+                </div>
+>>>>>>> 1e5324f09f25b674272c5f5a49974dd5a7136be5:Views/pages/index.ejs
+                
+            </section>
+
+    </main>
+</body>
+<%- include("../shared/footer") %>
+</html>
