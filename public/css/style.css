@@ -25,15 +25,16 @@ em
 {
     font-family: emoji;
     font-weight: 100;
-    font-size: 70px;
-    padding-left: 30px;
+    font-size: 60px;
 }
 .logo img{
-    width: 17%;
+    width: 40%;
     height: auto;
+    margin-right: 2%;
 }
 
 .navbar {
+    margin-left: 25%;
     display: flex;
 }
 
@@ -57,49 +58,19 @@ em
 .nav-item a:hover {
     color: #f0f0f0; /* Lighter color on hover */
 }
-
+.nav-item a img{
+    margin-left: 0px;
+}
 .main-content {
     padding: 20px;
 }
 
 .hero-section {
     text-align: center;
-    padding: 100px 0;
+    padding: 50px 0;
     color: white; 
     position: relative;
-    overflow: hidden;
-    background-size: cover;
     background-position: center;
-    animation: changeBackground 20s infinite;
-}
-
-.hero-slider {
-    background-size: cover;
-    background-position: center;
-    height: 10vh;
-    animation: changeBackground 20s infinite;
-}
-
-.hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.hero-text h2 {
-    margin-bottom: 20px;
-    font-size: 35px;
-    font-family: emoji;
-}
-
-.hero-text h3 {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-}
-
-.hero-text p {
-    color: darkslategray;
 }
 
 @keyframes changeBackground {

@@ -1,0 +1,19 @@
+[
+    { "category": "A", "ingredients": "Almonds Anchovies Apples Apricots Avocados Artichokes" },
+    { "category": "B", "ingredients": "Bananas Barley Beacon Beef Beef Ribs Brown Rice Black Olives Broccoli Basils" },
+    { "category": "C", "ingredients": "Cheese Cherries Chiken Chicken Breast Chicken Wings Chocolate Coconut Corn Flour Cornmeal Cheddar Coffee" },
+    { "category": "D", "ingredients": "Duck" },
+    { "category": "F", "ingredients": "Fish Flex Seeds Feta Cheese" },
+    { "category": "G", "ingredients": "Goat Ground Beef Ground Chicken Ground Turkey Green Pepper Green Olives Goat Cheese Green Chillies Ginger Garlic" },
+    { "category": "H", "ingredients": "Ham Hot Peppers" },
+    { "category": "J", "ingredients": "Jalapeno Peppers" },
+    { "category": "L", "ingredients": "Lamb Lemons" },
+    { "category": "M", "ingredients": "Mangos Mushroom" },
+    { "category": "N", "ingredients": "Nectarines" },
+    { "category": "O", "ingredients": "Oats Onions" },
+    { "category": "P", "ingredients": "Peaches Peanuts Pears Pinapples Plums Pomegranates Pork Potatoes Parmeson Cheese Provolone Cheese" },
+    { "category": "Q", "ingredients": "Quinoa" },
+    { "category": "S", "ingredients": "Sausage Seafoof Shellfish Steak Spinach Sweet Cherry Tomoatoes Sun Dries Tomatoes Salt Sugar" },
+    { "category": "T", "ingredients": "Turkey Tomatoes" },
+    { "category": "W", "ingredients": "White Rice Flour Wild Game Wild Rice Wheat" }
+]

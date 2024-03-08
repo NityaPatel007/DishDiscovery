@@ -13,45 +13,14 @@
 
     <main class="main-content">
         <section class="hero-section">
-            <div class="hero-slider">
-                <div class="hero-text">
-                    <h2>Discover & Share Delicious Recipes</h2>
-                    <h3>Join our community of food lovers!</h3>
-                </div>
+            <div>
+                <h2>Discover & Share Delicious Recipes</h2>
+                <h3>Join our community of food lovers!</h3>
+                
             </div>
         </section>
         
-        <!--Not Working !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->>
-        <script>
-            const images = ['Image/italianpasta.jpg', 'Image/back.jpg', 'Image/Pancakes.jpg', 'Image/Poha.jpg'];
-            let currentIndex = 0;
         
-            function changeBackground() {
-                const heroSlider = document.querySelector('.hero-slider');
-                const heroText = document.querySelector('.hero-text');
-                const currentImage = images[currentIndex];
-        
-                heroSlider.style.backgroundImage = `url('${currentImage}')`;
-        
-                // Set text color based on the current image
-                const textColor = getTextcolorForImage(currentImage);
-                heroText.style.color = textColor;
-        
-                currentIndex = (currentIndex + 1) % images.length;
-            }
-        
-            function getTextcolorForImage(image) {
-                // Check the current image and return the appropriate text color
-                if (image === 'Image/italianpasta.jpg' || image === 'Image/back.jpg') {
-                    return 'black';
-                } else if (image === 'Image/Pancakes.jpg' || image === 'Image/Poha.jpg') {
-                    return 'white';
-                }
-            }
-        
-            setInterval(changeBackground, 5000);
-        </script>
-
         <section>
             <div class="normal-content">
                 <h3>Join DishDiscovery</h3>

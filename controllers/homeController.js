@@ -1,13 +1,27 @@
+const Recipe = require('../models/recipeModel');
+const RecipeShare = require('../models/recipesharingModel');
+const Ingredient = require('../models/ingredientsModel')
 function getIndex(req, res) {
     res.render('pages/index', { title: 'Index' });
 }
 
-function getRecipes(req, res) {
+const getRecipes = async(req, res) => {
+    try {
+        const recipes = await Recipe.find({}).exec();
+        res.render('pages/recipes', { recipes: recipes });
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
     res.render('pages/recipes', { title: 'Recipes' });
 }
 
-function getIngredients(req, res) {
-    res.render('pages/ingredients', { title: 'Ingredients' });
+const getIngredients = async (req, res) => {
+    try {
+        const ingredients = await Ingredient.find({}).exec(); // Fetch all ingredients from the database
+        res.render('pages/ingredients', { ingredients: ingredients }); // Render the ingredients template with the fetched data
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
 }
 
 function getRecipeSharing(req, res) {
