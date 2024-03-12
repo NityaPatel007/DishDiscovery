@@ -10,16 +10,16 @@ const showAddForm = (req, res) => {
 // Add a new ingredient to the database
 const addIngredient = async (req, res) => {
     try {
-        const { category, ingredients } = req.body;
-        
+        const { ingredient } = req.body;
+
         // Check if the ingredient already exists
-        const existingIngredient = await Ingredient.findOne({ category, ingredients });
+        const existingIngredient = await Ingredient.findOne({ ingredient: ingredient });
         if (existingIngredient) {
             return res.status(400).json({ message: 'Ingredient already exists' });
         }
 
         // Create a new ingredient
-        const newIngredient = await Ingredient.create({ category, ingredients });
+        const newIngredient = await Ingredient.create({ ingredient: ingredient });
         res.status(201).json({ message: 'Ingredient added successfully', data: newIngredient });
     } catch (err) {
         res.status(500).json({ message: 'Internal server error' });
@@ -28,4 +28,4 @@ const addIngredient = async (req, res) => {
 
 module.exports = {
     showAddForm, addIngredient
-}
+};

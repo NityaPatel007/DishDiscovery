@@ -25,7 +25,7 @@ em
 {
     font-family: emoji;
     font-weight: 100;
-    font-size: 60px;
+    font-size: 40px;
 }
 .logo img{
     width: 40%;
@@ -413,19 +413,12 @@ button {
 }
 .main-content_ingredients{
     max-width: 100%;
-    margin: 12% 5%;
-}
-.main-content_ingredients h1{
-    background-color: white;
-    width: 6%;
-    height: 6%;
-    text-align: center;
-    padding: 2%;
-    color: black;
+    margin: 5% 5%;
 }
 .main-content_ingredients h3{
     color: white;
     width: 25%;
     margin-top:2% ;
+    margin-bottom: 3%;
     float: left;
 }

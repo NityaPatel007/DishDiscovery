@@ -17,8 +17,8 @@ const getRecipes = async(req, res) => {
 
 const getIngredients = async (req, res) => {
     try {
-        const ingredients = await Ingredient.find({}).exec(); // Fetch all ingredients from the database
-        res.render('pages/ingredients', { ingredients: ingredients }); // Render the ingredients template with the fetched data
+        const ingredient = await Ingredient.find({}).exec(); // Fetch all ingredients from the database
+        res.render('pages/ingredients', { ingredient: ingredient }); // Render the ingredients template with the fetched data
     } catch (err) {
         res.status(500).json({ message: err.message });
     }

@@ -7,13 +7,6 @@
     <link rel="stylesheet" href="css\style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
-    <script>
-        function showAlert(message, type) {
-            const alertContainer = document.querySelector('.alert-container');
-            const alertClass = type === 'success' ? 'success' : 'error';
-            alertContainer.innerHTML = `<div class="alert ${alertClass}">${message}</div>`;
-        }
-    </script>
 </head>
 <body>
     <%- include("../shared/head") %>
@@ -21,7 +14,7 @@
         <div>
             <div class="form-container">
                 <h2>Share Your Recipe With Us</h2>
-                <form action="/submit-recipe" method="POST" onsubmit="submitForm(event)">
+                <form action="/submit-recipe" method="POST">
                     <div class="form-group">
                         <label for="title">Recipe Name:</label>
                         <input type="text" id="title" name="title" required>
@@ -60,30 +53,6 @@
             </div>
         </div>
     </main>
-
-    <script>
-        async function submitForm(event) {
-            event.preventDefault();
-            const form = event.target;
-            const formData = new FormData(form);
-            try {
-                const response = await fetch('/submit-recipe', {
-                    method: 'POST',
-                    body: formData
-                });
-                const data = await response.json();
-                if (data.status === 'success') {
-                    alert('Recipe uploaded successfully!');
-                    form.reset(); // Reset the form after successful submission
-                } else {
-                    alert(data.message);
-                }
-            } catch (error) {
-                alert('An error occurred. Please try again later.');
-            }
-        }
-    </script>
-    
 </body>
 <%- include("../shared/footer") %>
 </html>
