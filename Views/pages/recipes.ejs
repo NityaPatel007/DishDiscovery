@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore recipes</title>
     <link rel="stylesheet" href="css\style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <title>Explore Recipes</title>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 </head>
-<body class="body_recipes">
+<body>
     <%- include("../shared/head") %>
     <main class="grid-container">
-    <!-- Recipe 1: Spaghetti Carbonara -->
-    <% for(let recipe of recipes) { %>
+        <% for(let recipe of recipes) { %>
         <div class="recipe">
             <img src="<%= recipe.image %>" alt="<%= recipe.title %>">
             <h2><%= recipe.title %></h2>
@@ -29,9 +28,27 @@
                     <% } %>
                 <% } %>
             </ol>
+            <!-- Add Comment Form -->
+            <form action="/comments" method="POST">
+                <input type="hidden" name="recipeId" value="<%= recipe._id %>">
+                <textarea id="comment" name="comment" placeholder="Add your comment..." required></textarea>
+                <button type="submit">Add Comment</button>
+            </form>
+            <!-- Existing Comments -->
+            <ul class="comment-list">
+                <% for (let comment of comments) { %>
+                    <% if (comment.recipeId.toString() === recipe._id.toString()) { %>
+                        <li class="comment">
+                            <%= comment.text %>
+                            <!-- Display other comment details like author and timestamp if needed -->
+                        </li>
+                    <% } %>
+                <% } %>
+            </ul>
         </div>
-    <% }; %>
+        <% } %>
     </main>
 </body>
-<%- include("../shared/footer") %>
+
+<% include("../shared/footer") %>
 </html>

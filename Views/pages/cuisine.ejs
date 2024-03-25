@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuisines</title>
+    <link rel="stylesheet" href="css\style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <%- include("../shared/head") %>
+    <h1 style="color: orange; font-size: 50px; text-align: center; font-family: Georgia, 'Times New Roman', Times, serif; margin-bottom: 0%;">Ingredients</h1>
+    <main class="main-content_ingredients">
+        <% for(let cuis of cuisine) { %>
+            
+               <h3><%= cuis.cuisine %></h3>
+            
+        <% }; %>
+    </main>
+    <div class="form-container">
+        <h2>Add New Cuisine</h2>
+        <form action="/cuisine/add" method="POST">
+            <div class="form-group">
+                <label for="cuisine">Cuisine Name:</label>
+                <input type="text" id="cuisine" name="cuisine" required>
+            </div>
+            <button type="submit">Add Cuisine</button>
+        </form>
+    </div>
+</body>
+<%- include("../shared/footer") %>
+</html>

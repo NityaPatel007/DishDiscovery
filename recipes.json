@@ -1,78 +1,43 @@
 [
-    { "ingredient": "Almonds" },
-    { "ingredient": "Anchovies" },
-    { "ingredient": "Apples" },
-    { "ingredient": "Apricots" },
-    { "ingredient": "Avocados" },
-    { "ingredient": "Artichokes" },
-    { "ingredient": "Bananas" },
-    { "ingredient": "Barley" },
-    { "ingredient": "Beacon" },
-    { "ingredient": "Beef" },
-    { "ingredient": "Beef Ribs" },
-    { "ingredient": "Brown Rice" },
-    { "ingredient": "Black Olives" },
-    { "ingredient": "Broccoli" },
-    { "ingredient": "Basils" },
-    { "ingredient": "Cheese" },
-    { "ingredient": "Cherries" },
-    { "ingredient": "Chiken" },
-    { "ingredient": "Chicken Breast" },
-    { "ingredient": "Chicken Wings" },
-    { "ingredient": "Chocolate" },
-    { "ingredient": "Coconut" },
-    { "ingredient": "Corn Flour" },
-    { "ingredient": "Cornmeal" },
-    { "ingredient": "Cheddar" },
-    { "ingredient": "Coffee" },
-    { "ingredient": "Duck" },
-    { "ingredient": "Fish" },
-    { "ingredient": "Flex Seeds" },
-    { "ingredient": "Feta Cheese" },
-    { "ingredient": "Goat" },
-    { "ingredient": "Ground Beef" },
-    { "ingredient": "Ground Chicken" },
-    { "ingredient": "Ground Turkey" },
-    { "ingredient": "Green Pepper" },
-    { "ingredient": "Green Olives" },
-    { "ingredient": "Goat Cheese" },
-    { "ingredient": "Green Chillies" },
-    { "ingredient": "Ginger" },
-    { "ingredient": "Garlic" },
-    { "ingredient": "Ham" },
-    { "ingredient": "Hot Peppers" },
-    { "ingredient": "Jalapeno Peppers" },
-    { "ingredient": "Lamb" },
-    { "ingredient": "Lemons" },
-    { "ingredient": "Mangos" },
-    { "ingredient": "Mushroom" },
-    { "ingredient": "Nectarines" },
-    { "ingredient": "Oats" },
-    { "ingredient": "Onions" },
-    { "ingredient": "Peaches" },
-    { "ingredient": "Peanuts" },
-    { "ingredient": "Pears" },
-    { "ingredient": "Pinapples" },
-    { "ingredient": "Plums" },
-    { "ingredient": "Pomegranates" },
-    { "ingredient": "Pork" },
-    { "ingredient": "Potatoes" },
-    { "ingredient": "Parmeson Cheese" },
-    { "ingredient": "Provolone Cheese" },
-    { "ingredient": "Quinoa" },
-    { "ingredient": "Sausage" },
-    { "ingredient": "Seafoof" },
-    { "ingredient": "Shellfish" },
-    { "ingredient": "Steak" },
-    { "ingredient": "Spinach" },
-    { "ingredient": "Sweet Cherry Tomoatoes" },
-    { "ingredient": "Sun Dries Tomatoes" },
-    { "ingredient": "Salt" },
-    { "ingredient": "Sugar" },
-    { "ingredient": "Turkey" },
-    { "ingredient": "Tomatoes" },
-    { "ingredient": "White Rice Flour" },
-    { "ingredient": "Wild Game" },
-    { "ingredient": "Wild Rice" },
-    { "ingredient": "Wheat" }
-]
+    {
+      "recipeId": "65ea5d7a3dc6ac3adbadb341",
+      "comments": "Delicious recipe! I loved how creamy the sauce turned out."
+    },
+    {
+      "recipeId": "65ea5d7a3dc6ac3adbadb342",
+      "comments": "Perfect Margherita pizza! Loved the combination of flavors."
+    },
+    {
+      "recipeId": "65ea5d7a3dc6ac3adbadb343",
+      "comments": "These pancakes were fantastic! Fluffy and delicious!"
+    },
+    {
+      "recipeId": "65ea5d7a3dc6ac3adbadb344",
+      "comments": "Simple and tasty poha recipe! Loved the addition of peanuts."
+    },
+    {
+      "recipeId": "65ea5d7a3dc6ac3adbadb345",
+      "comments": "Beef Tacos were a hit with the family! Delicious and easy to make."
+    },
+    {
+      "recipeId": "65ea5d7a3dc6ac3adbadb346",
+      "comments": "Creamy and flavorful Chicken Alfredo Pasta! A new family favorite."
+    },
+    {
+      "recipeId": "65ea5d7a3dc6ac3adbadb347",
+      "comments": "Best Chocolate Chip Cookies I've ever tasted! Perfectly chewy."
+    },
+    {
+      "recipeId": "65ea5d7a3dc6ac3adbadb348",
+      "comments": "Delicious Vegetable Stir-Fry! Loved the mix of flavors and textures."
+    },
+    {
+      "recipeId": "65ea5d7a3dc6ac3adbadb349",
+      "comments": "Creamy Mushroom Risotto was a hit at dinner! Rich and satisfying."
+    },
+    {
+      "recipeId": "65ea5d7a3dc6ac3adbadb34a",
+      "comments": "Hearty and flavorful Beef Stew! Perfect for a cold winter night."
+    }
+  ]
+  
