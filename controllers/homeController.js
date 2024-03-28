@@ -7,7 +7,6 @@ const Comment = require('../models/commentModel');
 function getIndex(req, res) {
     res.render('pages/index', { title: 'Index' });
 }
-
 const getRecipes = async(req, res) => {
     try {
         const recipes = await Recipe.find({}).exec();
@@ -16,8 +15,8 @@ const getRecipes = async(req, res) => {
     } catch (err) {
         res.status(500).json({ message: err.message });
     }
-    res.render('pages/recipes', { title: 'Recipes' });
 }
+
 
 const getIngredients = async (req, res) => {
     try {

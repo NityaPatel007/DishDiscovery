@@ -35,16 +35,18 @@
                 <button type="submit">Add Comment</button>
             </form>
             <!-- Existing Comments -->
+            <h4 style="margin-top: 15px;">Comments</h4>
             <ul class="comment-list">
-                <% for (let comment of comments) { %>
+                <% comments.forEach(function(comment) { %>
                     <% if (comment.recipeId.toString() === recipe._id.toString()) { %>
                         <li class="comment">
-                            <%= comment.text %>
+                            <%= comment.comments %>
                             <!-- Display other comment details like author and timestamp if needed -->
                         </li>
                     <% } %>
-                <% } %>
+                <% }); %>
             </ul>
+            
         </div>
         <% } %>
     </main>

@@ -3,29 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Registration and Login</title>
-    <link rel="stylesheet" href="css\style.css">
+    <title>About DishDiscovery</title>
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .normal-content {
+            background: linear-gradient(135deg, #a6c0fe, #f68084);
+            border-radius: 10px;
+            border: 5px solid bisque;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .map-section {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            border: 5px solid bisque;
+        }
+
+        h2 {
+            color: orangered;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #6c757d;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        .devinfo {
+            font-weight: bold;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        h1{
+            color: orange;
+            text-align: center;
+            font-family:cursive;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
     <%- include("../shared/head") %>
+    <h1>About Us</h1>
     <main class="main-content">
         <section class="normal-content">
-            <h2>About DishDiscovery</h2>
-            <p>DishDiscovery is your go-to platform for discovering and sharing delicious recipes from around the world. Whether you're an experienced chef or a novice cook, we provide a diverse range of recipes to cater to every taste and skill level.</p>
-            <p>Join our vibrant community of food enthusiasts to explore new culinary horizons, share your favorite recipes, and connect with like-minded individuals who share your passion for cooking.</p>
+            <h2>Welcome to DishDiscovery</h2>
+            <p>DishDiscovery is not just a recipe platform; it's your culinary companion, your kitchen confidant, and your gateway to a world of flavors.</p>
+            <p>With DishDiscovery, you can:</p>
+            <ol>
+                <li>Explore a vast collection of curated recipes from diverse cuisines, ensuring there's always something new to try.</li>
+                <li>Discover trending ingredients, cooking techniques, and culinary tips to enhance your skills and knowledge.</li>
+                <li>Connect with fellow food enthusiasts, share your own recipes, and exchange cooking experiences and insights.</li>
+                <li>Personalize your experience with recipe recommendations tailored to your preferences and dietary needs.</li>
+                <li>Access our platform anytime, anywhere, from any device, making it convenient to plan and prepare meals on the go.</li>
+            </ol>
+            <p>Whether you're seeking inspiration for a special occasion, looking for quick and easy weekday meals, or simply indulging your passion for cooking, DishDiscovery is here to inspire and support you every step of the way.</p>
+        </section>
+
+        <h1>Our Head-Office is located at:</h1>
+        <section class="map-section">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5773.346292695925!2d-79.41589732472421!3d43.654968252317886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34ee3b2c56c7%3A0xbc3cc0aa9a79160e!2sDishDiscovery%20!5e0!3m2!1sen!2sca!4v1711661881778!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+        <section class="normal-content">
             <h3>Registration Information</h3>
-            <p>To access all the features of DishDiscovery, including sharing recipes and connecting with other users, you need to register for an account. Registration is free and only takes a few moments. Simply click on the "Register" link in the navigation menu to get started.</p>
+            <p>To unlock the full potential of DishDiscovery and embark on your culinary journey, sign up for a free account today. Join our community of food lovers and let's explore the world of flavors together!</p>
             <h3>Developer Information</h3>
-            <p>DishDiscovery is developed by a team of dedicated individuals who are passionate about food and technology:</p>
+            <p>DishDiscovery is developed by a dedicated team of food enthusiasts and technology experts:</p>
             <ul>
-                <ul><h5 class="devinfo">Nitya Patel</h5></ul>
-                <ul><h5 class="devinfo">Pratham Patel</h5></ul>
-                <ul><h5 class="devinfo">Dharmik Patel</h5></ul>
+                <li><h5 class="devinfo">Nitya Patel</h5></li>
+                <li><h5 class="devinfo">Pratham Patel</h5></li>
+                <li><h5 class="devinfo">Dharmik Patel</h5></li>
             </ul>
-            <p>For any inquiries or feedback about DishDiscovery, feel free to contact us at [insert contact email or form]. We're constantly striving to improve our platform and would love to hear from you!</p>
+            <p>Driven by our passion for food and innovation, we're committed to creating an exceptional culinary experience for you through DishDiscovery. Your satisfaction and enjoyment are our top priorities.</p>
         </section>
     </main>
+    <%- include("../shared/footer") %>
 </body>
-<%- include("../shared/footer") %>
 </html>
