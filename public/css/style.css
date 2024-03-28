@@ -21,14 +21,8 @@ body {
     align-items: center;
 }
 
-em
-{
-    font-family: emoji;
-    font-weight: 100;
-    font-size: 40px;
-}
 .logo img{
-    width: 40%;
+    width: 150%;
     height: auto;
     margin-right: 2%;
 }
@@ -41,8 +35,9 @@ em
 .nav-list {
     list-style-type: none;
     display: flex;
-    font-size: 31px;
+    font-size: 45px;
     font-family: emoji;
+    margin-right: -250px;
 }
 
 .nav-item {
