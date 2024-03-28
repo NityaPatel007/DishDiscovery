@@ -9,8 +9,7 @@ const commentSchema = new mongoose.Schema({
     required: true
   },
   "comments": {
-    type: String,
-    required: true
+    type: String
   }
 });
 

@@ -13,7 +13,7 @@ const addCuisine = async (req, res) => {
         }
 
         const newCuisine = await Cuisine.create({ cuisine: cuisine });
-        res.status(201).json({ message: 'Cuisine added successfully', data: newCuisine });
+        res.redirect('/cuisine');
     } catch (err) {
         res.status(500).json({ message: 'Internal server error' });
     }
