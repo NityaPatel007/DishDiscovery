@@ -6,21 +6,22 @@
     <title>Ingredients</title>
     <link rel="stylesheet" href="css\style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
     <%- include("../shared/head") %>
     <h1 style="color: orange; font-size: 50px; text-align: center; font-family: Georgia, 'Times New Roman', Times, serif; margin-bottom: 0%;">Ingredients</h1>
-    <main class="main-content_ingredients">
-        <% for(let ing of ingredient) { %>
-            
-               <h3><%= ing.ingredient %></h3>
-            
-        <% }; %>
+
+    <main class="main-content">
+        <ul class="main-content_ingredients" style="color: aliceblue;">
+            <% for(let ing of ingredient) { %>
+                <li]><%= ing.ingredient %></li>
+            <% }; %>
+        </ul>
     </main>
+
     <div class="form-container">
         <h2>Add New Ingredient</h2>
-        <form action="/ingredients/add" method="POST">
+        <form id="add-ingredient-form" action="/ingredients/add" method="POST">
             <div class="form-group">
                 <label for="ingredient">Ingredient Name:</label>
                 <input type="text" id="ingredient" name="ingredient" required>
@@ -28,6 +29,10 @@
             <button type="submit">Add Ingredient</button>
         </form>
     </div>
+
+    <footer>
+        <%- include("../shared/footer") %>
+    </footer>
 </body>
-<%- include("../shared/footer") %>
 </html>
+

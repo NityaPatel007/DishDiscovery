@@ -11,21 +11,23 @@ const showAddForm = (req, res) => {
 const addIngredient = async (req, res) => {
     try {
         const { ingredient } = req.body;
-
-        // Check if the ingredient already exists
         const existingIngredient = await Ingredient.findOne({ ingredient: ingredient });
         if (existingIngredient) {
-            return res.status(400).json({ message: 'Ingredient already exists' });
+            return res.redirect('/ingredients?error=IngredientAlreadyExists');
         }
 
         // Create a new ingredient
         const newIngredient = await Ingredient.create({ ingredient: ingredient });
-        res.status(201).json({ message: 'Ingredient added successfully', data: newIngredient });
+
+        // Redirect the user to a different page
+        res.redirect('/ingredients');
     } catch (err) {
+        console.error(err);
         res.status(500).json({ message: 'Internal server error' });
     }
 };
 
 module.exports = {
-    showAddForm, addIngredient
+    showAddForm,
+    addIngredient
 };

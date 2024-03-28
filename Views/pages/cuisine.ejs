@@ -11,10 +11,10 @@
 <body>
     <%- include("../shared/head") %>
     <h1 style="color: orange; font-size: 50px; text-align: center; font-family: Georgia, 'Times New Roman', Times, serif; margin-bottom: 0%;">Cuisines</h1>
-    <main class="main-content_ingredients">
+    <main class="main-content_ingredients" style="color: aliceblue;">
         <% for(let cuis of cuisine) { %>
             
-               <h3><%= cuis.cuisine %></h3>
+               <li><%= cuis.cuisine %></li>
             
         <% }; %>
     </main>
@@ -31,3 +31,4 @@
 </body>
 <%- include("../shared/footer") %>
 </html>
+
