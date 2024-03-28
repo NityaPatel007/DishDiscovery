@@ -44,7 +44,9 @@ function getRecipeSharing(req, res) {
 function getRegister(req, res) {
     res.render('pages/register', { title: 'Register' });
 }
-
+const getLogin = (req, res) => {
+    res.render('pages/login', { title: 'Login' });
+}
 function getAbout(req, res) {
     res.render('pages/about', { title: 'About' });
 }
@@ -52,6 +54,7 @@ function getAbout(req, res) {
 module.exports = {
     getIndex,
     getRecipes,
+    getLogin,
     getIngredients,
     getCuisine,
     getRecipeSharing,

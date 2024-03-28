@@ -9,6 +9,14 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #10000d;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Basic styling */
+.container {
+    max-width: 1200px; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 20px; /* Add some padding to the sides */
 }
 
 /* Basic styling */
@@ -28,14 +36,14 @@ body {
 }
 
 .navbar {
-    margin-left: 25%;
+    margin-left: 15%;
     display: flex;
 }
 
 .nav-list {
     list-style-type: none;
     display: flex;
-    font-size: 45px;
+    font-size: 35px;
     font-family: emoji;
     margin-right: -250px;
 }
@@ -54,7 +62,7 @@ body {
     color: #f0f0f0; /* Lighter color on hover */
 }
 .nav-item a img{
-    margin-left: 0px;
+    margin-left: -200px;
 }
 .main-content {
     padding: 20px;
@@ -406,14 +414,21 @@ button {
     text-align: center;
     padding: 20px 0;
 }
-.main-content_ingredients{
+.main-content_ingredients {
     max-width: 100%;
     margin: 5% 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-.main-content_ingredients h3{
+
+.main-content_ingredients li {
     color: white;
-    width: 25%;
-    margin-top:2% ;
+    width: 20%; /* Adjust as needed */
+    margin-top: 2%;
     margin-bottom: 3%;
-    float: left;
+    list-style: none;
+    font-size: large;
+    font-weight: bold;
 }
+

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration and Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .logo {
+            margin: 20px 30px 0 20px;
+            width: 15%;
+            height: auto;
+            float: left;
+        }
+
+        .title {
+            margin: 20px 200px;
+            font-size: 24px;
+            color: #ccc;
+        }
+
+        .form-wrapper {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-switch {
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="loginn">
+    <div class="container">
+        <img src="Image/Logo Dish Discovery.jpg" alt="" class="logo">
+        <h1 class="title">Log In TO ENTER THE WEBSITE</h1>
+    </div>
+    <main>
+        <div class="form-wrapper">
+            <div class="form-container" id="login-form-container">
+                <h2>User Login</h2>
+                <form action="/login" method="POST">
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+                <div class="form-switch">
+                    New user? <a href="/register">Register</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<%- include("../shared/footer") %>
+</html>
