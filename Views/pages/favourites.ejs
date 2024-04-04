@@ -43,24 +43,14 @@
         <section class="recipes">
             <h2>Here are the recipes that you have added to favorites:</h2>
             <table>
-                
+                <tr>
+                    <th>Recipes</th>
+                </tr>
+                <% for(let fav of favourites) { %>
                     <tr>
-                        <th>Favourites</th>
+                        <td><%= fav.recipe_title %></td>
                     </tr>
-                    <tr>
-                        <td>Spaghetti Carbonara</td>
-                    </tr>
-                    <tr>
-                        <td>Margherita Pizza</td>
-                    </tr>
-                
-                    <% favourites.forEach(function(favorite) { %>
-                        <tr>
-                            <td><%= favorite.recipe.title %></td>
-                            <td><a href="#" class="delete-btn">Delete</a></td>
-                        </tr>
-                    <% }); %>
-                
+                <% }; %>
             </table>
             <div class="additional-info">
                 <p><strong>Note:</strong> You can find the detailed ingredients and instructions for each recipe in your favorites section. Enjoy cooking!</p>

@@ -12,6 +12,10 @@ const favouriteSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Recipe',
         required: true
+    },
+    recipe_title: {
+        type: String, // Assuming the recipe title is a string
+        required: true
     }
 });
 

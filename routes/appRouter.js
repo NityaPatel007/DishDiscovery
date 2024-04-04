@@ -1,12 +1,12 @@
 const express = require("express");
 const router = express.Router();
-const { getIndex, getRecipes, getIngredients, getCuisine, getRecipeSharing, getAbout, getRegister, getLogin } = require("../controllers/homeController.js");
+const { getIndex, getRecipes, getIngredients, getCuisine, getRecipeSharing, getAbout, getRegister, getLogin, getUser } = require("../controllers/homeController.js");
 const { submitRecipe } = require("../controllers/recipeController.js");
 const { showAddForm, addIngredient } = require("../controllers/ingredientController.js");
 const { showAddForm2, addCuisine } = require("../controllers/cuisineController.js");
 const { addComment, getCommentsByRecipeId } = require("../controllers/commentController.js");
 const { registerUser, loginUser } = require("../controllers/userController.js");
-const { addFavorite, getFavorites, deleteFavorite } = require("../controllers/favouriteController.js")
+const { addFavorite, getFavorites } = require("../controllers/favouriteController.js")
 router
     // Home Page
     .get("/", (req, res) => {
@@ -25,6 +25,8 @@ router
 
     .get("/recipes", getRecipes)
 
+    .get("/user", getUser)
+    
     // Comment page
     .post('/comments', addComment)
     .get('/recipes/:recipeId/comments', getCommentsByRecipeId)
@@ -53,8 +55,7 @@ router
     .post("/login", loginUser)
     
     .post('/favourites/add', addFavorite)
-    .get('/favourites', getFavorites)
-    .post('/favourites/remove', deleteFavorite);
+    .get('/favourites', getFavorites);
 
 // Export the router
 module.exports = router;

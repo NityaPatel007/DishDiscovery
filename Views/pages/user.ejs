@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About DishDiscovery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .normal-content {
+            background: linear-gradient(135deg, #a6c0fe, #f68084);
+            border-radius: 10px;
+            border: 5px solid bisque;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: orangered;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #6c757d;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        .devinfo {
+            font-weight: bold;
+        }
+        .gif{
+            display: flex;
+            justify-content: center;
+            margin-bottom:2% ;
+        }
+        p {
+            line-height: 1.6;
+            font-size: large;
+            margin-bottom: 10px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        h1{
+            margin-top:10px ;
+            color: orange;
+            text-align: center;
+            font-family:cursive;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body class="loginn">
+    <%- include("../shared/head") %>
+    <h1>Hello!</h1>
+    <main class="main-content">
+        <section class="gif">
+        <img src="https://media0.giphy.com/media/26u4cqVR8dsmedTJ6/giphy.gif?cid=6c09b952e6e4o6jsdzu59wqs782lfjt11b4ps21m3ii6l329&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g" alt="User Avatar" class="user-image">
+        </section>
+        <p>You've successfully logged in to our website. We're excited to have you here! Your user page serves as a hub for exploring our platform and accessing various features. <br>Take a moment to familiarize yourself with the options available to you.</p>
+        <h2>What You Can Do:</h2>
+        <ul>
+            <li><b>Explore Recipes:</b> Browse through our extensive collection of mouthwatering recipes from around the world.</li>
+            <li><b>Save Favorites:</b> Found a recipe you love? Add it to your favorites list for quick access later.</li>
+            <li><b>Add Comments:</b> You ca comments to any of the available recipes that you likes</li>
+            <li><b>Share Recipes:</b> You can share your own recipes to this website which other user can see and make.</li>
+        </ul>
+        <p>If you have any questions or need assistance, don't hesitate to reach out to our support team. Happy cooking!</p>
+    </main>
+    <%- include("../shared/footer") %>
+</body>
+</html>

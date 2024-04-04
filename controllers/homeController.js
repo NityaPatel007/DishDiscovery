@@ -7,8 +7,9 @@ const User = require("../models/userModel")
 function getIndex(req, res) {
     res.render('pages/index', { title: 'Index' });
 }
-function getFavourites(req, res) {
-    res.render('pages/favourites', { title: 'Index' });
+
+function getUser(req, res) {
+    res.render('pages/user', { title: 'User' });
 }
 const getRecipes = async(req, res) => {
     try {
@@ -56,12 +57,12 @@ function getAbout(req, res) {
 
 module.exports = {
     getIndex,
-    getFavourites,
     getRecipes,
     getLogin,
     getIngredients,
     getCuisine,
     getRecipeSharing,
     getRegister,
-    getAbout
+    getAbout,
+    getUser
 };
