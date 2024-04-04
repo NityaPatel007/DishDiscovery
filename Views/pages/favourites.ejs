@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DishDiscovery</title>
+    <link rel="stylesheet" href="css\style.css">
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        td{
+            border: 2px solid white;
+            padding: 15px;
+            font-size: 20px;
+            border-collapse:collapse;
+        }
+        th{
+            font-size: 30px;
+        }
+        table{
+            display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100% ;
+        }
+        h1, h2{
+            margin: 2%;
+            text-align: center;
+        }
+        p{
+            padding: 2%;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body class="loginn">
+    <%- include("../shared/head") %>
+    <div class="content">
+        <h1>Welcome,  Pratham!</h1>
+        <h2>Welcome to Favourites Section</h2>
+        <p>Welcome to DishDiscovery, your ultimate destination for discovering and saving delicious recipes! Whether you're a seasoned chef or just starting out in the kitchen, our platform offers a wide range of mouthwatering recipes for every taste and occasion.</p>
+        <p>By saving your favorite recipes to your profile, you can easily access them anytime, anywhere. No more searching through countless websites or flipping through cookbooks – your favorite recipes are just a click away!</p>
+        <section class="recipes">
+            <h2>Here are the recipes that you have added to favorites:</h2>
+            <table>
+                
+                    <tr>
+                        <th>Favourites</th>
+                    </tr>
+                    <tr>
+                        <td>Spaghetti Carbonara</td>
+                    </tr>
+                    <tr>
+                        <td>Margherita Pizza</td>
+                    </tr>
+                
+                    <% favourites.forEach(function(favorite) { %>
+                        <tr>
+                            <td><%= favorite.recipe.title %></td>
+                            <td><a href="#" class="delete-btn">Delete</a></td>
+                        </tr>
+                    <% }); %>
+                
+            </table>
+            <div class="additional-info">
+                <p><strong>Note:</strong> You can find the detailed ingredients and instructions for each recipe in your favorites section. Enjoy cooking!</p>
+            </div>
+        </section>
+    </div>
+</body>
+<%- include("../shared/footer") %>
+</html>

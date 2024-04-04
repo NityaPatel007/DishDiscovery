@@ -10,6 +10,7 @@
 </head>
 <body>
     <%- include("../shared/head") %>
+    
     <main class="grid-container">
         <% for(let recipe of recipes) { %>
         <div class="recipe">
@@ -46,7 +47,11 @@
                     <% } %>
                 <% }); %>
             </ul>
-            
+            <form action="/favourites/add" method="POST">
+                <input type="hidden" name="user_id" value="<%= user._id %>"> <!-- Assuming userId is available -->
+                <input type="hidden" name="recipe_id" value="<%= recipe._id %>">
+                <button type="submit">Add to Favorites</button>
+            </form>
         </div>
         <% } %>
     </main>

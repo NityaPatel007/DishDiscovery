@@ -6,7 +6,7 @@ const { showAddForm, addIngredient } = require("../controllers/ingredientControl
 const { showAddForm2, addCuisine } = require("../controllers/cuisineController.js");
 const { addComment, getCommentsByRecipeId } = require("../controllers/commentController.js");
 const { registerUser, loginUser } = require("../controllers/userController.js");
-
+const { addFavorite, getFavorites, deleteFavorite } = require("../controllers/favouriteController.js")
 router
     // Home Page
     .get("/", (req, res) => {
@@ -50,7 +50,11 @@ router
     .get("/register", getRegister)
     .post("/register", registerUser)
     .get("/login", getLogin)
-    .post("/login", loginUser);
+    .post("/login", loginUser)
     
+    .post('/favourites/add', addFavorite)
+    .get('/favourites', getFavorites)
+    .post('/favourites/remove', deleteFavorite);
+
 // Export the router
 module.exports = router;

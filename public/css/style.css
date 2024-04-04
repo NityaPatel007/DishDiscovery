@@ -61,8 +61,8 @@ body {
     color: #f0f0f0; /* Lighter color on hover */
 }
 .nav-item a img{
-    margin-left: -200px;
-    width: 15%;
+    margin-left: 0px;
+    width: 35%;
 }
 .main-content {
     padding: 20px;

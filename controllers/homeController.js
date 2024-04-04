@@ -3,15 +3,19 @@ const RecipeShare = require('../models/recipesharingModel');
 const Ingredient = require('../models/ingredientsModel');
 const Cuisine = require('../models/cuisineModel');
 const Comment = require('../models/commentModel');
-
+const User = require("../models/userModel")
 function getIndex(req, res) {
     res.render('pages/index', { title: 'Index' });
+}
+function getFavourites(req, res) {
+    res.render('pages/favourites', { title: 'Index' });
 }
 const getRecipes = async(req, res) => {
     try {
         const recipes = await Recipe.find({}).exec();
-        const comments = await Comment.find({}).exec(); // Fetch all comments
-        res.render('pages/recipes', { recipes: recipes, comments: comments }); // Pass recipes and comments to the view
+        const comments = await Comment.find({}).exec(); 
+        const user = await User.findOne({}).exec();
+        res.render('pages/recipes', { recipes: recipes, comments: comments, user:user }); // Pass recipes and comments to the view
     } catch (err) {
         res.status(500).json({ message: err.message });
     }
@@ -52,6 +56,7 @@ function getAbout(req, res) {
 
 module.exports = {
     getIndex,
+    getFavourites,
     getRecipes,
     getLogin,
     getIngredients,
