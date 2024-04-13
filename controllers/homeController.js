@@ -11,12 +11,14 @@ function getIndex(req, res) {
 function getUser(req, res) {
     res.render('pages/user', { title: 'User' });
 }
-const getRecipes = async(req, res) => {
+const getRecipes = async (req, res) => {
     try {
         const recipes = await Recipe.find({}).exec();
+        const sharedRecipes = await RecipeShare.find({}).exec(); // Fetch shared recipes
+        const allRecipes = [...recipes, ...sharedRecipes]; // Combine recipes from both models
         const comments = await Comment.find({}).exec(); 
         const user = await User.findOne({}).exec();
-        res.render('pages/recipes', { recipes: recipes, comments: comments, user:user }); // Pass recipes and comments to the view
+        res.render('pages/recipes', { recipes: allRecipes, comments: comments, user: user });
     } catch (err) {
         res.status(500).json({ message: err.message });
     }
