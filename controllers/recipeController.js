@@ -4,9 +4,10 @@ const submitRecipe = async (req, res) => {
     try {
         const { title, description, cuisine, ingredients, instructions, image } = req.body;
         const recipe = await RecipeShare.create({ title, description, cuisine, ingredients, instructions, image});
-        res.status(201).json({ status: 'success', message: 'Recipe added successfully' });
+        res.redirect('/recipes');
     } catch (err) {
-        res.status(400).json({ status: 'fail', message: err.message });
+        console.error(err);
+        res.status(500).json({ message: 'Internal server error' });
     }
 };
 
